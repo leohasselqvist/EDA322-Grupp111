@@ -1,0 +1,59 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_misc.all;
+
+entity alu_wRCA is
+    port(
+        alu_inA, alu_inB: in std_logic_vector(7 downto 0);
+        alu_op: in std_logic_vector(1 downto 0);
+        alu_out: out std_logic_vector(7 downto 0);
+        C: out std_logic;
+        E: out std_logic;
+        Z: out std_logic
+    );
+end alu_wRCA;
+
+architecture Structural of alu_wRCA is
+	signal aAdd: std_logic_vector(7 downto 0);
+	signal bAdd: std_logic_vector(7 downto 0);
+	signal outAnd: std_logic_vector(7 downto 0);
+	signal aAnd: std_logic_vector(7 downto 0);
+	signal bAnd: std_logic_vector(7 downto 0);
+	signal s: std_logic_vector(7 downto 0);
+	signal cin: std_logic;
+	signal aRol: std_logic_vector(7 downto 0);
+	signal outRol: std_logic_vector(7 downto 0);
+	begin
+		aAnd <= alu_inA;
+		bAnd <= alu_inB;
+		outAnd <= aAnd and bAnd;
+		
+		aRol <= alu_inA;
+		rol_o: entity work.rotateleft(Dataflow)
+			port map (
+				ain => aRol,
+				bout => outRol
+			);
+
+		aAdd <= alu_inA;
+		bAdd <= not(alu_inB) when (alu_op(0) = '1') else alu_inB;
+		cin <= alu_op(0);
+		rca_0: entity work.rca(Structural)
+			port map (
+				a => aAdd,
+				b => bAdd,
+				cin => cin,
+				cout => C,
+				s => s
+			);
+
+		mux: entity work.mux4to1(dataflow)
+			port map (
+				w0 => outRol,
+				w1 => outAnd,
+				w2 => s,
+				w3 => s,
+				s => alu_out
+			);
+	end Structural;
+	

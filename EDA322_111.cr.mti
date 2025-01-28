@@ -1,0 +1,95 @@
+C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity rotateleft
+-- Compiling architecture Dataflow of rotateleft
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/chacc_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/chacc_pkg.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package chacc_pkg
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rca.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rca.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity rca
+-- Compiling architecture Structural of rca
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package chacc_pkg
+-- Compiling entity proc_controller
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity EDA322_processor
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4to1
+-- Compiling architecture dataflow of mux4to1
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package chacc_pkg
+-- Compiling entity proc_bus
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/reg.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/reg.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity reg
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fa
+-- Compiling architecture DataFlow of fa
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/cmp.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/cmp.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Compiling entity cmp
+-- Compiling architecture Dataflow of cmp
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+
+} {} {}}
