@@ -43,7 +43,7 @@ begin
 				dataOut <= I_mem(to_integer(unsigned(address)));
 			end if;
 			if (writeEn = '1') then
-				I_mem(to_integer(unsigned(address))) <= dataIn;
+				dataOut <= I_mem(to_integer(unsigned(address)));
 			end if;
 		end if;
 	end process;

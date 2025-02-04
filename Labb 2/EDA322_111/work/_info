@@ -1,0 +1,52 @@
+m255
+K4
+z2
+!s11e vcom 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/leohas/Documents/Digides/Labbar/EDA322_111
+Eregn
+Z0 w1738660374
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+Z3 dC:/Users/leohas/Documents/Digides/Labbar/Labb 2/EDA322_111
+Z4 8C:/Users/leohas/Documents/Digides/Labbar/Labb 2/EDA322_111/reg.vhd
+Z5 FC:/Users/leohas/Documents/Digides/Labbar/Labb 2/EDA322_111/reg.vhd
+l0
+L4 1
+VM=g5mCnUDf<WWNAdzZ=<@2
+!s100 lS0fK^M]U?0A@ZU15z=:D1
+Z6 OL;C;2024.1;79
+32
+Z7 !s110 1738660547
+!i10b 1
+Z8 !s108 1738660547.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/Labb 2/EDA322_111/reg.vhd|
+Z10 !s107 C:/Users/leohas/Documents/Digides/Labbar/Labb 2/EDA322_111/reg.vhd|
+!i113 0
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+Z13 DEx4 work 4 regn 0 22 M=g5mCnUDf<WWNAdzZ=<@2
+!i122 1
+l13
+Z14 L12 11
+Z15 V17aW`WW92P47:I<L>VEiC0
+Z16 !s100 X986XVKcjN2bQKWQN9O8Y2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12

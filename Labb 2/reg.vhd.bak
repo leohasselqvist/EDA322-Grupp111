@@ -13,7 +13,7 @@ architecture Behavior of regn is
 begin
 	process(clk, resetn)
 	begin
-		if resetn = '0' then
+		if resetn = '1' then
 			dataOut <= (others => '0');
 		elsif (clk'EVENT and clk = '1') then
 			if loadEnable = '1' then
