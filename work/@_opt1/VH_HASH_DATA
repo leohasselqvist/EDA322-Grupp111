@@ -1,0 +1,41 @@
+[N
+5
+2
+6 memory
+1
+56 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/work
+5
+10 ADDR_WIDTH
+3
+8 behavior
+4
+10 DATA_WIDTH
+]
+[G
+1
+2
+3
+1
+5
+1
+0
+8
+0
+0 0
+0
+0
+]
+[G
+1
+2
+3
+1
+4
+1
+0
+12
+0
+0 0
+0
+0
+]
