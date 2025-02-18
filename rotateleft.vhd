@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity rotateleft is
+    generic( L : INTEGER := 1);
     port(   
     	    ain: in   std_logic_vector (7 downto 0);
     	    bout: out  std_logic_vector (7 downto 0)
@@ -10,5 +11,5 @@ end rotateleft;
 
 architecture Dataflow of rotateleft is
 begin
-	bout <= ain(6 downto 0) & ain(7);
+	bout <= ain(7-L downto 0) & ain(7 downto 7-L+1);
 end Dataflow;

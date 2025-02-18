@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 library work;
 use work.chacc_pkg.all;
@@ -27,65 +28,75 @@ entity proc_controller is
     );
 end proc_controller;
 
-
-
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use ieee.math_real.uniform;
-use ieee.math_real.floor;
-
-architecture mock_controller of proc_controller is
-
-    signal full_mock : std_logic_vector(10 downto 0);
-
-begin
-
-
-
-process(clk, resetn)
-    variable seed1_a, seed2_a, seed1_b, seed2_b : positive := 1;
-    variable a_real, b_real : real := 0.0;
-    variable a_int, b_int : integer := 0;
-begin
-
-    if resetn /= '1' then
-
-        seed1_a := 1;
-        seed2_a := 7;
-        seed1_b := 12;
-        seed2_b := 3;
-
-        full_mock <= (others => '0');
-        busSel <= (others => '0');    
-
-    elsif rising_edge(clk) then
-
-        busSel <= (others => '0');
-
-
-        uniform( seed1_a, seed2_a, a_real );
-        uniform( seed1_b, seed2_b, b_real );
-
-        a_int := integer(floor(a_real * real(2**11)));
-        b_int := integer(floor(b_real * 4.0));
-
-        full_mock <= std_logic_vector( to_unsigned( a_int, full_mock'LENGTH ) );
-        busSel(b_int) <= '1';
-    end if;
-
-end process;
-
-pcSel <= full_mock(0);
-pcLd <= full_mock(1);
-imRead <= '1';
-dmRead <= '1';
-dmWrite <= full_mock(4);
-aluOp <= full_mock(6 downto 5);
-flagLd <= full_mock(7);
-accSel <= full_mock(8);
-accLd <= full_mock(9);
-dsLd <= full_mock(10);
-
-
-end mock_controller;
+architecture Controller of proc_controller is
+	TYPE state_type IS (FE,DE1,DE2,EX,ME);
+	signal curr_state : state_type;
+	signal next_state : state_type;
+	begin
+	state_reg : process(clk, master_load_enable, resetn)   -- Process for state register (NOT FETCH)
+	begin
+		if resetn = '0' then
+			curr_state <= FE;  -- If reset, go back to fetch
+		elsif (clk'EVENT and clk = '1') then
+			if master_load_enable = '1' then
+				curr_state <= next_state;
+			end if;
+		end if;
+	end process state_reg;
+	combinational:  process(opcode, curr_state)  -- Process to decide next state (ALSO NOT FETCH)
+	begin
+		if (curr_state = FE) then
+			case opcode is
+				when "0001" | "0011" | "0100" | "0101" | "0110" 			   => next_state <= EX;
+				when "0111" | "1000" | "1001" | "1010" | "1011" | "1100" | "1110" | "1111" => next_state <= DE1;
+				when "1101"								   => next_state <= ME;
+				when others								   => next_state <= FE;
+			end case;
+		elsif (curr_state = DE1) then
+			case opcode is
+				when "1110"							=> next_state <= DE2;
+				when "0111" | "1000" | "1001" | "1010" | "1011" | "1100"	=> next_state <= EX;
+				when "1111"							=> next_state <= ME;
+				when others							=> next_state <= FE;
+			end case;
+		elsif (curr_state = DE2) then
+			next_state <= EX;
+		elsif ((curr_state = EX) or (curr_state = ME)) then
+			next_state <= FE;
+		end if;
+	end process;
+	storage:  process(opcode, e_flag)
+	begin
+		-- FETCH
+		if (curr_state = FE) then
+			imRead <= '1' and master_load_enable;
+			pcSel <= '0';
+			pcLd <= '1' and master_load_enable;
+		elsif (curr_state = DE1) then
+			if ((opcode > "0110") and not (opcode = "1110")) then
+				busSel <= "0001";
+				dmRead <= '1' and master_load_enable;
+			end if;
+		elsif (curr_state = DE2) then
+			busSel <= "0010";
+			dmRead <= '1' and master_load_enable;
+		elsif (curr_state = ME) then
+			case opcode is
+				when "1101" => busSel <= "0001";
+				when "1111" => busSel <= "0010";
+				when others => busSel <= "0000"; -- Should never happen
+			end case;
+			dmWrite <= '1' and master_load_enable;
+		elsif (curr_state = EX) then
+			-- BusSel
+			case opcode is
+				when "0001"								=> busSel <= "1000";
+				when "0111" | "1000" | "1001" | "1010" | "1011" | "1100" | "1110" 	=> busSel <= "0010";
+				when "0100"								=> busSel <= "0100";
+				when "0011" | "0101" | "0110"						=> busSel <= "0001";
+				when others								=> busSel <= "0000";
+			end case;
+		end if;
+		
+	end process;
+end Controller;

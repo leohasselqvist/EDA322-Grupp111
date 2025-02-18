@@ -15,6 +15,5 @@ architecture Dataflow of mux2 is
 begin
 	with s select o <=
 		i0 WHEN '0',
-		i1 WHEN '1'
-		"0" WHEN others;
+		i1 WHEN others;
 end Dataflow;
