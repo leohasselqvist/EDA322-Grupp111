@@ -44,6 +44,16 @@ QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading entity mux4to1
 -- Loading entity cmp
 
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package chacc_pkg
+-- Compiling entity proc_controller
+-- Compiling architecture Controller of proc_controller
+
 } {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd
 QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading package STANDARD

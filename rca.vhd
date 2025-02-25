@@ -19,6 +19,7 @@ architecture Structural of rca is
 	end component;
 	signal c: std_logic_vector(8 downto 0);
 	begin
+		
 		c(0) <= cin;
 		g1: for n in 0 to 7 generate
 			FA_n : fa port map (a(n), b(n), c(n), s(n), c(n+1));

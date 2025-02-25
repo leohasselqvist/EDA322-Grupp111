@@ -31,4 +31,4 @@ begin
 	    bussOut <= "00000000";
         end if;
     end process;
-end architecture Behavioral;
+end architecture Behavior;

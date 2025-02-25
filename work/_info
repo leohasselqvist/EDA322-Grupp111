@@ -1,17 +1,45 @@
 m255
 K4
 z2
-Z0 !s12c _opt2
+Z0 !s12c _opt1
 Z1 !s99 nomlopt
 R0
 R1
 R0
 R1
-Z2 !s12c _opt1
+Z2 !s12c _opt2
+R1
+R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R0
+R1
+R2
 R1
 R0
 R1
 R0
+R1
+R2
+R1
+R0
+R1
+R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R0
+R1
+R2
 R1
 R2
 R1
@@ -31,11 +59,13 @@ R0
 R1
 R2
 R1
-R2
+R0
 R1
 R0
 R1
 R2
+R1
+R0
 R1
 Z3 !s12c _opt
 R1
@@ -47,11 +77,11 @@ R3
 R1
 R3
 R1
+R2
+R1
 R0
 R1
-R2
-R1
-R2
+R0
 R1
 R3
 R1
@@ -80,10 +110,10 @@ n@_opt
 Z10 OL;O;2024.1;79
 R4
 T_opt1
-!s110 1739863580
-VFiEPYOiUhNLXNVA`?m[Xl0
-04 10 8 work rotateleft dataflow 1
-=1-c8d9d2271132-67b4361b-2e8-ed0
+!s110 1740479346
+V;b=5AKa=^d_<A[@1P1lHc1
+04 19 9 work eda322_processor_tb test_arch 1
+=1-10e7c6373bd7-67bd9b71-320-1fc0
 R1
 R5
 R6
@@ -92,12 +122,11 @@ R8
 R9
 n@_opt1
 R10
-R4
 T_opt2
-!s110 1739866231
-VMz^=ihHaHD^Q=762eTmmA1
-04 19 8 work rotatelefttestbench behavior 1
-=1-c8d9d2271132-67b44077-ef-2418
+!s110 1740477140
+V601n;lQk_c0]Dlc^8b^dY3
+04 4 8 work mux2 dataflow 1
+=1-10e7c6373bd7-67bd92d3-11d-3e34
 R1
 R5
 R6
@@ -108,14 +137,14 @@ n@_opt2
 R10
 R4
 Ealu_testbench
-Z11 w1739862563
+Z11 w1740467903
 Z12 DPx4 work 9 chacc_pkg 0 22 IkUH@WC92KUZz^a523XiF2
 Z13 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z14 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z15 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z17 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 1267
+!i122 1644
 Z18 dC:/Users/leohas/Documents/Digides/Labbar/EDA322_111
 Z19 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_testbench.vhd
 Z20 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_testbench.vhd
@@ -125,9 +154,9 @@ VDoN5X=5X8VDJ<RLN4dX<X0
 !s100 _oWllKh@^B^a3QDLRBiUT1
 Z21 OL;C;2024.1;79
 33
-Z22 !s110 1739868687
+Z22 !s110 1740479317
 !i10b 1
-Z23 !s108 1739868686.000000
+Z23 !s108 1740479317.000000
 Z24 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_testbench.vhd|
 Z25 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_testbench.vhd|
 !i113 0
@@ -141,7 +170,7 @@ R15
 R16
 R17
 DEx4 work 13 alu_testbench 0 22 DoN5X=5X8VDJ<RLN4dX<X0
-!i122 1267
+!i122 1644
 l108
 L16 135
 V1R<kziT_71?69Rl>ATgbg3
@@ -162,7 +191,7 @@ Z28 DPx8 synopsys 10 attributes 0 22 iThS5<O8gHDP?YiMiccE>3
 Z29 DPx4 ieee 14 std_logic_misc 0 22 T3<OAQk@7zOVj;_ZQ8ClU2
 R16
 R17
-!i122 1254
+!i122 1631
 R18
 Z30 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd
 Z31 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd
@@ -172,9 +201,9 @@ VCFa;_km>?_3PCB<z@U2E72
 !s100 19m@YaToC>MB2j0ijG56^0
 R21
 32
-Z32 !s110 1739868683
+Z32 !s110 1740479314
 !i10b 1
-Z33 !s108 1739868683.000000
+Z33 !s108 1740479314.000000
 Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd|
 Z35 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd|
 !i113 0
@@ -190,7 +219,7 @@ R29
 R16
 R17
 Z41 DEx4 work 8 alu_wrca 0 22 CFa;_km>?_3PCB<z@U2E72
-!i122 1254
+!i122 1631
 l27
 L16 52
 VRo8YgZc:OCMD<6]ZVCd223
@@ -208,7 +237,7 @@ R27
 Pchacc_pkg
 R16
 R17
-!i122 1255
+!i122 1632
 R11
 R18
 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/chacc_pkg.vhd
@@ -233,7 +262,7 @@ R28
 R29
 R16
 R17
-!i122 1256
+!i122 1633
 R18
 Z42 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/cmp.vhd
 Z43 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/cmp.vhd
@@ -243,7 +272,7 @@ VW1[hg`8o;9YN5bKAeLXC_0
 !s100 7iYm<F5fSVnKeKTf`8:la1
 R21
 32
-Z44 !s110 1739868684
+Z44 !s110 1740479315
 !i10b 1
 R33
 Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/cmp.vhd|
@@ -257,7 +286,7 @@ R29
 R16
 R17
 R37
-!i122 1256
+!i122 1633
 l12
 L11 4
 V`cfBcdDEFabS>Vl8U372W1
@@ -273,80 +302,80 @@ R46
 R36
 R27
 Eeda322_processor
-R11
+Z47 w1740477587
 R16
 R17
-!i122 1257
+!i122 1634
 R18
-Z47 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd
-Z48 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd
+Z48 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd
+Z49 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd
 l0
 L4 1
-V4AKJUG:_YT[DOfE2R=d021
-!s100 e`:VhRgJnj^0TVA]<BA1U2
+VnLN9gi:QfVIhDX:5PcMQn0
+!s100 Xz[YPjBN7=<RFH5YecLec0
 R21
 32
 R44
 !i10b 1
-Z49 !s108 1739868684.000000
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd|
-Z51 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd|
+Z50 !s108 1740479315.000000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd|
+Z52 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/EDA322_processor.vhd|
 !i113 0
 R36
 R27
 Astructural
 R12
-Z52 DEx4 work 15 proc_controller 0 22 O1m8S9[^;YNzDhJiaUN:o2
+Z53 DEx4 work 15 proc_controller 0 22 IHZd_GUSdWThzZWZbFO?_1
 R14
 R13
-Z53 DEx4 work 8 proc_bus 0 22 2BkZ`PMW:cg9P2_Kc^jHn1
-Z54 DEx4 work 4 reg1 0 22 1S:c^Bgzd]9Pzdz>^O:l>1
+Z54 DEx4 work 8 proc_bus 0 22 Lm:zPl5iRz[KJCDjI;:1I3
+Z55 DEx4 work 4 reg1 0 22 1S:c^Bgzd]9Pzdz>^O:l>1
 R28
 R29
 R41
-Z55 DEx4 work 4 regn 0 22 7b^JgL2ocnW1ME[k_lOOd0
-Z56 DEx4 work 4 mux2 0 22 D=;66FIdZdoGR5cR_YbLe0
+Z56 DEx4 work 4 regn 0 22 7b^JgL2ocnW1ME[k_lOOd0
+Z57 DEx4 work 4 mux2 0 22 D=;66FIdZdoGR5cR_YbLe0
 R39
 R15
-Z57 DEx4 work 6 memory 0 22 _`3f0f]@Q6cZWBZQ[?mN;2
+Z58 DEx4 work 6 memory 0 22 _`3f0f]@Q6cZWBZQ[?mN;2
 R16
 R17
-DEx4 work 16 eda322_processor 0 22 4AKJUG:_YT[DOfE2R=d021
-!i122 1257
+DEx4 work 16 eda322_processor 0 22 nLN9gi:QfVIhDX:5PcMQn0
+!i122 1634
 l57
-L22 204
-VcTZ:>WJMXSZVOYTBL_8K82
-!s100 ^=3<N:Am9g1_0IGWZkmm^2
+L22 203
+V8M?Tomle5c5b5UE6J4OLk0
+!s100 U_EH>e7kDY:UYhR[zm84^2
 R21
 32
 R44
 !i10b 1
-R49
 R50
 R51
+R52
 !i113 0
 R36
 R27
 Eeda322_processor_tb
-Z58 w1739866877
+Z59 w1740473126
 R15
 R16
 R17
-!i122 1270
+!i122 1647
 R18
-Z59 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd
-Z60 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd
+Z60 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd
+Z61 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd
 l0
 L5 1
 Vi]2I82DhjOMg^VKLT:O2<2
 !s100 I6mb^iDe3OdAHT:m`Q5LJ0
 R21
 32
-R22
+Z62 !s110 1740479318
 !i10b 1
-Z61 !s108 1739868687.000000
-Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd|
-Z63 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd|
+Z63 !s108 1740479318.000000
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd|
+Z65 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd|
 !i113 0
 R36
 R27
@@ -355,18 +384,18 @@ R15
 R16
 R17
 DEx4 work 19 eda322_processor_tb 0 22 i]2I82DhjOMg^VKLT:O2<2
-!i122 1270
+!i122 1647
 l42
 L8 60
 Vd]@EELHg4HM0CDmKRRYiG3
 !s100 >cZRa8J69@IRo6KLzlh5A1
 R21
 32
-R22
-!i10b 1
-R61
 R62
+!i10b 1
 R63
+R64
+R65
 !i113 0
 R36
 R27
@@ -374,10 +403,10 @@ Efa
 R11
 R16
 R17
-!i122 1258
+!i122 1635
 R18
-Z64 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd
-Z65 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd
+Z66 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd
+Z67 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd
 l0
 L4 1
 V1ao01zASigZ[l9STFT2Ra2
@@ -386,9 +415,9 @@ R21
 32
 R44
 !i10b 1
-R49
-Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd|
-Z67 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd|
+R50
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd|
+Z69 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/fa.vhd|
 !i113 0
 R36
 R27
@@ -396,7 +425,7 @@ Adataflow
 R16
 R17
 DEx4 work 2 fa 0 22 1ao01zASigZ[l9STFT2Ra2
-!i122 1258
+!i122 1635
 l14
 L13 5
 Vhe@0^GEE^9M__4kEPnN3j3
@@ -405,21 +434,21 @@ R21
 32
 R44
 !i10b 1
-R49
-R66
-R67
+R50
+R68
+R69
 !i113 0
 R36
 R27
 Ememory
-R11
+Z70 w1740477771
 R15
 R16
 R17
-!i122 1259
+!i122 1636
 R18
-Z68 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd
-Z69 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd
+Z71 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd
+Z72 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd
 l0
 L6 1
 V_`3f0f]@Q6cZWBZQ[?mN;2
@@ -428,9 +457,9 @@ R21
 32
 R44
 !i10b 1
-R49
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd|
-Z71 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd|
+R50
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd|
+Z74 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/memory.vhd|
 !i113 0
 R36
 R27
@@ -438,60 +467,60 @@ Abehavior
 R15
 R16
 R17
-R57
-!i122 1259
+R58
+!i122 1636
 l39
 L18 34
-V7@ZXG85XSN@N=[5Qk^i9f0
-!s100 RhBSYRj3GT5ZOWb29i;W<3
+Vz6I3][zi1^<hLoc]<SQ?80
+!s100 T8oMV8M>8Rf@oEdEiJaJc2
 R21
 32
 R44
 !i10b 1
-R49
-R70
-R71
+R50
+R73
+R74
 !i113 0
 R36
 R27
 Emux2
-Z72 w1739862883
+R11
 R16
 R17
-!i122 1260
+!i122 1637
 R18
-Z73 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd
-Z74 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd
+Z75 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd
+Z76 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd
 l0
 L4 1
 VD=;66FIdZdoGR5cR_YbLe0
 !s100 fhD[=cTFHWH7RlN^_YS7F3
 R21
 32
-Z75 !s110 1739868685
+Z77 !s110 1740479316
 !i10b 1
-Z76 !s108 1739868685.000000
-Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd|
-Z78 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd|
+R50
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd|
+Z79 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux2.vhd|
 !i113 0
 R36
 R27
 Adataflow
 R16
 R17
-R56
-!i122 1260
+R57
+!i122 1637
 l15
 L14 6
 VnfmlJXlLm1:fXgiCd[?Xj2
 !s100 @DoAe>;Dhl9TF9bi>bWR?0
 R21
 32
-R75
-!i10b 1
-R76
 R77
+!i10b 1
+R50
 R78
+R79
 !i113 0
 R36
 R27
@@ -499,17 +528,17 @@ Emux4to1
 R11
 R16
 R17
-!i122 1266
+!i122 1643
 R18
-Z79 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd
-Z80 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd
+Z80 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd
+Z81 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd
 l0
 L4 1
 VkFjdD<nBYZ[HHmJ7FOzE@0
 !s100 ek]K9K@^9NWU1hSRU4QA?1
 R21
 32
-Z81 !s110 1739868686
+R22
 !i10b 1
 R23
 Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd|
@@ -521,14 +550,14 @@ Adataflow
 R16
 R17
 R38
-!i122 1266
+!i122 1643
 l13
 L12 9
 VH<_b]RAN^X?:H5Cfn3TV?2
 !s100 SecAF4SP:?_mZoCZn;TEl3
 R21
 32
-R81
+R22
 !i10b 1
 R23
 R82
@@ -537,26 +566,26 @@ R83
 R36
 R27
 Eproc_bus
-R11
+Z84 w1740475511
 R14
 R13
 R16
 R17
-!i122 1261
+!i122 1638
 R18
-Z84 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd
-Z85 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd
+Z85 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd
+Z86 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd
 l0
 L6 1
-V2BkZ`PMW:cg9P2_Kc^jHn1
-!s100 Pe`AgA;WMG0J:PO`o3e=h1
+VLm:zPl5iRz[KJCDjI;:1I3
+!s100 iamF>Qo`;28GI<S9ENR9J0
 R21
 32
-R75
+R77
 !i10b 1
-R76
-Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd|
-Z87 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd|
+Z87 !s108 1740479316.000000
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd|
+Z89 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_bus.vhd|
 !i113 0
 R36
 R27
@@ -565,19 +594,19 @@ R14
 R13
 R16
 R17
-R53
-!i122 1261
+R54
+!i122 1638
 l19
-Z88 L18 17
-V[NgQgNlagiZR5:EO@]5_C2
-!s100 ImRXl5JjaoBK?A_]OAi9_1
+Z90 L18 17
+VP;;=:D:4b7dQbYNhMDgZJ1
+!s100 :QdN=>G1;UzC[3JkY;Wz03
 R21
 32
-R75
+R77
 !i10b 1
-R76
-R86
 R87
+R88
+R89
 !i113 0
 R36
 R27
@@ -586,10 +615,10 @@ R14
 R13
 R16
 R17
-R53
+DEx4 work 8 proc_bus 0 22 2BkZ`PMW:cg9P2_Kc^jHn1
 !i122 1069
 l19
-R88
+R90
 VSCfgeN<U<Q]17aSLE=`ak0
 !s100 JTMe7iE7G;ThmR9DJ<>A03
 R21
@@ -597,31 +626,31 @@ R21
 !s110 1739269928
 !i10b 1
 !s108 1739269928.000000
-R86
-R87
+R88
+R89
 !i113 0
 R36
 R27
 w1739264698
 Eproc_controller
-Z89 w1739875712
+Z91 w1740479301
 R12
 R15
 R16
 R17
-!i122 1288
+!i122 1639
 R18
-Z90 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd
-Z91 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd
+Z92 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd
+Z93 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd
 l0
 L8 1
 VIHZd_GUSdWThzZWZbFO?_1
 !s100 ?iQDV4oWK1??nD[?ZIU>D2
 R21
 32
-Z92 !s110 1739875716
+R77
 !i10b 1
-Z93 !s108 1739875716.000000
+R87
 Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd|
 Z95 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/proc_controller.vhd|
 !i113 0
@@ -632,17 +661,17 @@ R12
 R15
 R16
 R17
-Z96 DEx4 work 15 proc_controller 0 22 IHZd_GUSdWThzZWZbFO?_1
-!i122 1288
+R53
+!i122 1639
 l35
-L31 72
-VDhaCJWN>a^dZ3C;Wg1gjU3
-!s100 =cb6^2PH1R]TZ?ggb>na^0
+L31 114
+V;NMNM[PWTf?@[Ue^e469C0
+!s100 =QDNPUEKYdQmHXG]RIbiR1
 R21
 32
-R92
+R77
 !i10b 1
-R93
+R87
 R94
 R95
 !i113 0
@@ -650,7 +679,7 @@ R36
 R27
 Amock_controller
 R12
-R52
+DEx4 work 15 proc_controller 0 22 O1m8S9[^;YNzDhJiaUN:o2
 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
 R15
 R16
@@ -672,10 +701,10 @@ R36
 R27
 w1739869485
 Erca
-R11
+Z96 w1740476081
 R16
 R17
-!i122 1263
+!i122 1640
 R18
 Z97 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rca.vhd
 Z98 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rca.vhd
@@ -685,9 +714,9 @@ V`9AEZF0_jOcQWRjfd3_HR0
 !s100 QK=PY:h7cE9W_ZjPObBo_3
 R21
 32
-R81
+R77
 !i10b 1
-R76
+R87
 Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rca.vhd|
 Z100 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rca.vhd|
 !i113 0
@@ -697,16 +726,16 @@ Astructural
 R16
 R17
 R39
-!i122 1263
+!i122 1640
 l21
-L13 15
-VEin3Iz>0N0<oeQ>Ba`93^0
-!s100 6Y;bKCENM3BKBmOL@DLI62
+L13 16
+V5O8Ok[2006A6j]8z77C;U3
+!s100 :aPe3^Z6A1k@k?3:IoN=12
 R21
 32
-R81
+R77
 !i10b 1
-R76
+R87
 R99
 R100
 !i113 0
@@ -738,7 +767,7 @@ Ereg1
 R11
 R16
 R17
-!i122 1268
+!i122 1645
 R18
 Z105 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/reg1.vhd
 Z106 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/reg1.vhd
@@ -748,9 +777,9 @@ V1S:c^Bgzd]9Pzdz>^O:l>1
 !s100 g5d5iLL]8=?i;<5D:b79V1
 R21
 32
-R22
+R62
 !i10b 1
-R61
+R23
 Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/reg1.vhd|
 Z108 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/reg1.vhd|
 !i113 0
@@ -759,27 +788,27 @@ R27
 Abehavior
 R16
 R17
-R54
-!i122 1268
+R55
+!i122 1645
 l12
 L11 13
 VZ9ENINN>V18`L>lnzkDAB0
 !s100 cN8i9`z?D@]nT7RGC`NOZ3
 R21
 32
-R22
+R62
 !i10b 1
-R61
+R23
 R107
 R108
 !i113 0
 R36
 R27
 Eregn
-R11
+Z109 w1740477524
 R16
 R17
-!i122 1264
+!i122 1641
 R18
 R101
 R102
@@ -789,9 +818,9 @@ V7b^JgL2ocnW1ME[k_lOOd0
 !s100 oLSinD@zEkF@Z3h_lOJ010
 R21
 32
-R81
+R22
 !i10b 1
-R23
+R87
 R103
 R104
 !i113 0
@@ -800,27 +829,27 @@ R27
 Abehavior
 R16
 R17
-R55
-!i122 1264
+R56
+!i122 1641
 l13
 L12 13
 V1ACL0_6<Y_CEG^S<jcC?`2
 !s100 E^]XDXaih_kE1nMYflOK12
 R21
 32
-R81
+R22
 !i10b 1
-R23
+R87
 R103
 R104
 !i113 0
 R36
 R27
 Erotateleft
-Z109 w1739863563
+R11
 R16
 R17
-!i122 1265
+!i122 1642
 R18
 Z110 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd
 Z111 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd
@@ -830,7 +859,7 @@ VMz:9BTbRY4^YChJbzVRT80
 !s100 @Fkm>Ka<@kmOPbol=`YeZ3
 R21
 32
-R81
+R22
 !i10b 1
 R23
 Z112 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd|
@@ -842,14 +871,14 @@ Adataflow
 R16
 R17
 R40
-!i122 1265
+!i122 1642
 l13
 L12 4
 VN<e`EK6^<19`^U^2K[ea:2
 !s100 JUNh:N7^ba?:?9`YnP1LU3
 R21
 32
-R81
+R22
 !i10b 1
 R23
 R112
@@ -858,24 +887,24 @@ R113
 R36
 R27
 Erotatelefttestbench
-Z114 w1739866274
+R11
 R16
 R17
-!i122 1269
+!i122 1646
 R18
-Z115 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd
-Z116 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd
+Z114 8C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd
+Z115 FC:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd
 l0
 L4 1
 VPZRgidGcCUZ8Xb?I_HMFI1
 !s100 AY=eR[_PG[LGlJa9VQPST0
 R21
 32
-R22
+R62
 !i10b 1
-R61
-Z117 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd|
-Z118 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd|
+R63
+Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd|
+Z117 !s107 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd|
 !i113 0
 R36
 R27
@@ -887,18 +916,18 @@ R40
 R16
 R17
 DEx4 work 19 rotatelefttestbench 0 22 PZRgidGcCUZ8Xb?I_HMFI1
-!i122 1269
+!i122 1646
 l19
 L10 43
 VDm=6>:P;iTz;A0L:FX_O@0
 !s100 LKCe?i=AL>kgEnfG]`KTB0
 R21
 32
-R22
+R62
 !i10b 1
-R61
+R63
+R116
 R117
-R118
 !i113 0
 R36
 R27

@@ -23,5 +23,5 @@ architecture Structural of rca is
 		g1: for n in 0 to 7 generate
 			FA_n : fa port map (a(n), b(n), c(n), s(n), c(n+1));
 		end generate;
-		cout <= c(8)
+		cout <= c(8);
 	end Structural;

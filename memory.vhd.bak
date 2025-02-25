@@ -37,7 +37,7 @@ end function;
 
 signal I_mem : MEMORY_ARRAY := init_memory_wfile(INIT_FILE);
 begin
-	process(clk,readEn,writeEn)
+	process(clk)
 	begin
 		if ((clk'EVENT and clk = '1')) then
 			if (readEn = '1') then

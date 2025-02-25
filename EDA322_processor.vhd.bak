@@ -2,8 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity EDA322_processor is
-    generic (dInitFile : string := "d_memory_lab2.mif";
-             iInitFile : string := "i_memory_lab2.mif");
+    generic (dInitFile : string := "d_memory_lab3.mif";
+             iInitFile : string := "i_memory_lab3.mif");
     port(
         clk                : in  std_logic;
         resetn             : in  std_logic;
@@ -20,11 +20,11 @@ entity EDA322_processor is
 end EDA322_processor;
 
 architecture Structural of EDA322_processor is
-	signal bussOut: std_logic_vector(7 downto 0);
+	signal busOut: std_logic_vector(7 downto 0);
 	signal pcSel: std_logic;
 	signal pcLd: std_logic;
 	signal imRead: std_logic;
-	signal bussSel: std_logic_vector(3 downto 0);
+	signal busSel: std_logic_vector(3 downto 0);
 	signal imDataOut: std_logic_vector(11 downto 0);
 	signal opcode: std_logic_vector(3 downto 0);
 	signal imVar: std_logic_vector(7 downto 0);
@@ -33,8 +33,8 @@ architecture Structural of EDA322_processor is
 	signal jumpAddr: std_logic_vector(7 downto 0);
 	signal nextPC: std_logic_vector(7 downto 0);
 	signal pcOut: std_logic_vector(7 downto 0);
-	signal bussOutExtend: std_logic_vector(7 downto 0);
-	signal bussOutComp: std_logic_vector(7 downto 0);
+	signal busOutExtend: std_logic_vector(7 downto 0);
+	signal busOutComp: std_logic_vector(7 downto 0);
 
 	signal dmRead: std_logic;
 	signal dmWrite: std_logic;
@@ -55,7 +55,7 @@ architecture Structural of EDA322_processor is
 	signal CregOut: std_logic;
 	signal ZregOut: std_logic;
 	begin
-		
+
 		iMemory: entity work.memory(Behavior)
 			generic map (
 				INIT_FILE => iInitFile
@@ -64,11 +64,12 @@ architecture Structural of EDA322_processor is
 				readEn => imRead,
 				dataOut => imDataOut,
 				address => pcOut,
-				dataIn => "000000000000",
+				dataIn => "111111111111",
 				writeEn => '0',
 				clk => clk
 			);
 		imDataOut2seg <= imDataOut;
+		pc2seg <= pcOut;
 		opcode <= imDataOut(11 downto 8);
 		imVar <= imDataOut(7 downto 0);
 		faTop: entity work.rca(Structural)
@@ -78,13 +79,13 @@ architecture Structural of EDA322_processor is
 				cin => '0',
 				s => pcIncrOut
 			);
-		bussOutExtend <= ("0" & bussOut(6 downto 0));
-		bussOutComp <= not(bussOutExtend) when (bussOut(7) = '1') else bussOutExtend;
+		busOutExtend <= ("0" & busOut(6 downto 0));
+		busOutComp <= not(busOutExtend) when (busOut(7) = '1') else busOutExtend;
 		faBot: entity work.rca(Structural)
 			port map(
 				a => pcOut,
-				b => bussOutComp,
-				cin => bussOut(7),
+				b => busOutComp,
+				cin => busOut(7),
 				s => jumpAddr
 			);
 		
@@ -102,10 +103,8 @@ architecture Structural of EDA322_processor is
 				loadEnable => pcLd,
 				dataOut => pcOut,
 				clk => clk,
-				resetn => '1'
+				resetn => resetn
 			);
-
-
 
 
 		dMemory: entity work.memory(Behavior)
@@ -116,7 +115,7 @@ architecture Structural of EDA322_processor is
 			port map(
 				readEn => dmRead,
 				writeEn => dmWrite,
-				address => bussOut,
+				address => busOut,
 				dataIn => accOut,
 				dataOut => dmDataOut,
 				clk => clk
@@ -126,7 +125,7 @@ architecture Structural of EDA322_processor is
 		alu: entity work.alu_wRCA(Structural)
 			port map(
 				alu_inA => accOut,
-				alu_inB => bussOut,
+				alu_inB => busOut,
 				alu_op => aluOp,
 				alu_out => aluOut,
 				E => E,
@@ -139,7 +138,7 @@ architecture Structural of EDA322_processor is
 			port map (
 				s => accSel,
 				i0 => aluOut,
-				i1 => bussOut,
+				i1 => busOut,
 				o => accMuxOut
 			);
 		accReg: entity work.regn(Behavior)
@@ -148,7 +147,7 @@ architecture Structural of EDA322_processor is
 				loadEnable => accLd,
 				dataOut => accOut,
 				clk => clk,
-				resetn => '1'
+				resetn => resetn
 			);
 		acc2seg <= accOut;
 
@@ -158,7 +157,7 @@ architecture Structural of EDA322_processor is
 				loadEnable => dsLd,
 				dataOut => ds2seg,
 				clk => clk,
-				resetn => '1'
+				resetn => resetn
 			);
 		
 		
@@ -168,7 +167,7 @@ architecture Structural of EDA322_processor is
 				loadEnable => flagLd,
 				dataOut => EregOut,
 				clk => clk,
-				resetn => '1'
+				resetn => resetn
 			);
 		Creg: entity work.reg1(Behavior)
 			port map (
@@ -176,7 +175,7 @@ architecture Structural of EDA322_processor is
 				loadEnable => flagLd,
 				dataOut => CregOut,
 				clk => clk,
-				resetn => '1'
+				resetn => resetn
 			);
 		Zreg: entity work.reg1(Behavior)
 			port map (
@@ -189,18 +188,18 @@ architecture Structural of EDA322_processor is
 		
 
 
-		internalBuss: entity work.proc_bus(Behavior)
+		internalBus: entity work.proc_bus(Behavior)
 			port map (
 				imDataOut => imVar,
 				dmDataOut => dmDataOut,
 				accOut => accOut,
 				extIn => extIn,
-				bussSel => bussSel,
-				bussOut => bussOut
+				busSel => busSel,
+				busOut => busOut
 			);
-		busOut2seg <= bussOut;
+		busOut2seg <= busOut;
 		
-		controller: entity work.proc_controller
+		controller: entity work.proc_controller(Controller)
 			port map(
 				clk => clk,
 				resetn => resetn,
@@ -210,7 +209,7 @@ architecture Structural of EDA322_processor is
 				z_flag => ZregOut,
 
 
-				busSel => bussSel,
+				busSel => busSel,
 				pcSel => pcSel,
 				pcLd => pcLd,
 				imRead => imRead,

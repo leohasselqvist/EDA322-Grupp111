@@ -35,16 +35,16 @@ begin
 end function;
 
 
-signal I_mem : MEMORY_ARRAY := init_memory_wfile(INIT_FILE);
+signal mem : MEMORY_ARRAY := init_memory_wfile(INIT_FILE);
 begin
 	process(clk)
 	begin
 		if ((clk'EVENT and clk = '1')) then
 			if (readEn = '1') then
-				dataOut <= I_mem(to_integer(unsigned(address)));
+				dataOut <= mem(to_integer(unsigned(address)));
 			end if;
 			if (writeEn = '1') then
-				I_mem(to_integer(unsigned(address))) <= dataIn;
+				mem(to_integer(unsigned(address))) <= dataIn;
 			end if;
 		end if;
 	end process;

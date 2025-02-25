@@ -2,12 +2,12 @@
 4
 1
 56 C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/work
-3
-8 behavior
-2
-19 rotatelefttestbench
 4
-2 L2
+7 d_width
+3
+8 dataflow
+2
+4 mux2
 ]
 [G
 1
@@ -15,9 +15,9 @@
 3
 1
 4
+1
 0
-0
-4
+8
 0
 0 0
 0

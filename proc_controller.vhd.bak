@@ -46,18 +46,13 @@ architecture Controller of proc_controller is
 	combinational:  process(opcode, curr_state)  -- Process to decide next state (ALSO NOT FETCH)
 	begin
 		if (curr_state = FE) then
-			case opcode is
-				when "0001" | "0011" | "0100" | "0101" | "0110" 			   => next_state <= EX;
-				when "0111" | "1000" | "1001" | "1010" | "1011" | "1100" | "1110" | "1111" => next_state <= DE1;
-				when "1101"								   => next_state <= ME;
-				when others								   => next_state <= FE;
-			end case;
+			next_state <= DE1;
 		elsif (curr_state = DE1) then
 			case opcode is
-				when "1110"							=> next_state <= DE2;
-				when "0111" | "1000" | "1001" | "1010" | "1011" | "1100"	=> next_state <= EX;
-				when "1111"							=> next_state <= ME;
-				when others							=> next_state <= FE;
+				when "0000"		=> next_state <= FE;
+				when "1101" | "1111"	=> next_state <= ME;
+				when "1110"		=> next_state <= DE2;
+				when others		=> next_state <= EX;
 			end case;
 		elsif (curr_state = DE2) then
 			next_state <= EX;
@@ -65,21 +60,24 @@ architecture Controller of proc_controller is
 			next_state <= FE;
 		end if;
 	end process;
-	storage:  process(opcode, e_flag)
+	storage:  process(opcode, e_flag, z_flag, master_load_enable)
 	begin
 		-- FETCH
 		if (curr_state = FE) then
 			imRead <= '1' and master_load_enable;
 			pcSel <= '0';
 			pcLd <= '1' and master_load_enable;
+		-- DECODE 1
 		elsif (curr_state = DE1) then
 			if ((opcode > "0110") and not (opcode = "1110")) then
 				busSel <= "0001";
 				dmRead <= '1' and master_load_enable;
 			end if;
+		-- DECODE 2
 		elsif (curr_state = DE2) then
 			busSel <= "0010";
 			dmRead <= '1' and master_load_enable;
+		-- MEMORY
 		elsif (curr_state = ME) then
 			case opcode is
 				when "1101" => busSel <= "0001";
@@ -87,6 +85,7 @@ architecture Controller of proc_controller is
 				when others => busSel <= "0000"; -- Should never happen
 			end case;
 			dmWrite <= '1' and master_load_enable;
+		-- EXECUTE
 		elsif (curr_state = EX) then
 			-- BusSel
 			case opcode is
@@ -94,8 +93,51 @@ architecture Controller of proc_controller is
 				when "0111" | "1000" | "1001" | "1010" | "1011" | "1100" | "1110" 	=> busSel <= "0010";
 				when "0100"								=> busSel <= "0100";
 				when "0011" | "0101" | "0110"						=> busSel <= "0001";
-				when other								=> busSel <= "0000";
+				when others								=> busSel <= "0000";
 			end case;
+			--PCSel
+			case opcode is
+				when "0100" | "0101" | "0110" 	=> pcSel <= '1';
+				when others 			=> pcSel <= 'X';
+			end case;
+			--accSel
+			case opcode is
+				when "0001" | "0011" | "1100" | "1110"	=> accSel <= '1';
+				when "1000" | "1001" | "1010" | "1011"	=> accSel <= '0';
+				when others 				=> accSel <= 'X';
+			end case;
+			--aluOp
+			if ((opcode > "0111") and (opcode < "1100")) then
+				aluOp(1) <= opcode(3);
+				aluOp(0) <= opcode(2);
+			end if;
+			-- rest are master load enable dependant
+			if (master_load_enable = '1') then
+				--pcLd
+				if (opcode = "0100") then
+					pcLd <= '1';
+				elsif ((opcode = "0101") and (e_flag = '0')) then
+					pcLd <= '1';
+				elsif ((opcode = "0110") and (z_flag = '1')) then
+					pcLd <= '1';
+				end if;
+				--flagLd
+				case opcode is
+					when "0111" | "1000" | "1001" | "1010" |"1011"	=> flagLd <= '1';
+					when others					=> flagLd <= '0';
+				end case;
+				--accLd
+				case opcode is
+					when "0001" | "0011" | "1000" | "1001" | "1010" | "1011" | "1100" | "1110"	=> accLd <= '1';
+					when others									=> accLd <= '0';
+				end case;
+				-- dsLd
+				if (opcode = "0010") then
+					dsLd <= '1';
+				else
+					dsLd <= '0';
+				end if;
+			end if;
 		end if;
 		
 	end process;
