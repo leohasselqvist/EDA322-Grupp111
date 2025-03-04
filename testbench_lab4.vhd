@@ -39,7 +39,7 @@ architecture test_arch of testbench_lab4 is
     signal busOut2seg_tb     : std_logic_vector(7 downto 0);
     signal ds2seg_tb         : std_logic_vector(7 downto 0);
     
-	type vector_array is array (natural range <>) of std_logic_vector;
+	
 begin
 
     clk <= not clk after c_CLK_PERIOD/2;
@@ -67,3 +67,8 @@ begin
               '1' after c_CLK_PERIOD;
     extIn_tb <= "00000000", "10100110" after 120 ns;
 end architecture test_arch;
+
+function vectorarr(sig: std_logic_vector) return vector_array is
+	type vector_array is array (natural range <>) of std_logic_vector;
+	begin
+	

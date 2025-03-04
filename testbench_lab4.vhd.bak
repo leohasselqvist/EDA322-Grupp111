@@ -39,6 +39,7 @@ architecture test_arch of testbench_lab4 is
     signal busOut2seg_tb     : std_logic_vector(7 downto 0);
     signal ds2seg_tb         : std_logic_vector(7 downto 0);
     
+	type vector_array is array (natural range <>) of std_logic_vector;
 begin
 
     clk <= not clk after c_CLK_PERIOD/2;

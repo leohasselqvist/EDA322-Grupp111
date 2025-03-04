@@ -1,4 +1,13 @@
-C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd
+C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbench_lab4.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbench_lab4.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity testbench_lab4
+-- Compiling architecture test_arch of testbench_lab4
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd
 QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -9,14 +18,13 @@ QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Compiling entity rotateleft
 -- Compiling architecture Dataflow of rotateleft
 
-} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd {2 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd
 QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling entity EDA322_processor_tb
-** Warning: C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd(8): (vcom-1615) Existing architecture 'EDA322_processor_tb(test_arch)' at C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbench_lab4.vhd(8) will be overwritten.
 -- Compiling architecture test_arch of EDA322_processor_tb
 
 } {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/chacc_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/chacc_pkg.vhd
