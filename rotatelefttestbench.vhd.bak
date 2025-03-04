@@ -44,7 +44,7 @@ begin
 	process
 	begin
 		wait for 30 ns;
-		assert((test2 = '0') and (test1 = '1')) report "bruh it doesnt work, skibidi error" severity error;
+		assert((test2 = '1') and (test1 = '1')) report "bruh it doesnt work, skibidi error" severity error;
 		wait;
 	end process;
 end Behavior;

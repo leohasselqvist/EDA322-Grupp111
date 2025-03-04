@@ -7,8 +7,8 @@ end rotatelefttestbench;
 architecture Behavior of rotatelefttestbench is
 signal ain1 : std_logic_vector(7 downto 0) := "10101010";
 signal ain2 : std_logic_vector(7 downto 0) := "00001111";
-signal bin1 : std_logic_vector(7 downto 0) := "00000001";
-signal bin2 : std_logic_vector(7 downto 0) := "00000100";
+signal bin1 : std_logic_vector(2 downto 0) := "001";
+signal bin2 : std_logic_vector(2 downto 0) := "100";
 signal bout1 : std_logic_vector(7 downto 0);
 signal bout2 : std_logic_vector(7 downto 0);
 signal boutCorr1 : std_logic_vector(7 downto 0) := "01010101";

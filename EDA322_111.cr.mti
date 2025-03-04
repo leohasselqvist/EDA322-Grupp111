@@ -1,10 +1,22 @@
-C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd
+C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotateleft.vhd
+QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package ATTRIBUTES
+-- Loading package std_logic_misc
+-- Loading package NUMERIC_STD
+-- Compiling entity rotateleft
+-- Compiling architecture Dataflow of rotateleft
+
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd {2 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd
 QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Compiling entity EDA322_processor_tb
+** Warning: C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbenchlab3.vhd(8): (vcom-1615) Existing architecture 'EDA322_processor_tb(test_arch)' at C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/testbench_lab4.vhd(8) will be overwritten.
 -- Compiling architecture test_arch of EDA322_processor_tb
 
 } {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/chacc_pkg.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/chacc_pkg.vhd
@@ -14,7 +26,7 @@ QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading package std_logic_1164
 -- Compiling package chacc_pkg
 
-} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd
 QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -28,8 +40,6 @@ QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading entity rca
 -- Loading entity mux4to1
 -- Loading entity cmp
-** Error (suppressible): C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd(39): (vcom-1272) Length of formal "bin" is 8; length of actual is 3.
-** Note: C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/alu_wRCA.vhd(71): VHDL Compiler exiting
 
 } {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rca.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rca.vhd
 QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
@@ -83,7 +93,7 @@ QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Compiling entity alu_testbench
 -- Compiling architecture BEHAVIORAL of alu_testbench
 
-} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd
+} {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd
 QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -95,9 +105,6 @@ QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024
 -- Loading package NUMERIC_STD
 -- Loading entity rotateleft
 -- Loading entity cmp
-** Error (suppressible): C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd(22): (vcom-1272) Length of formal "bin" is 3; length of actual is 8.
-** Error (suppressible): C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd(28): (vcom-1272) Length of formal "bin" is 3; length of actual is 8.
-** Note: C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/rotatelefttestbench.vhd(50): VHDL Compiler exiting
 
 } {} {}} C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/leohas/Documents/Digides/Labbar/EDA322_111/mux4to1.vhd
 QuestaSim-64 vcom 2024.1 Compiler 2024.02 Feb  1 2024

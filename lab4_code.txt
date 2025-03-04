@@ -1,0 +1,78 @@
+# The program does not perform any meaningful task. 
+# Instead it uses all the available operations of the processor to validate the correct operation of the processor.
+# If you need to debug the processor, follow each operation one by one, examine the value of the system 
+#    during each stage, and the value of the program counter. Be careful with the branch instructions.  
+# Bellow you can find each executed operation, and some comments for the executed program. 
+#    You can find specific details about each instruction in the processor's documentation 
+# All the address are represented using decimal numbers. 
+
+
+# Read from the external input and check that the ACC has the correct value. 
+00. IN         
+01. SUB 0 	# Susbtract Mem[0] from ACC
+02. JZ 4  	# Jump +4 if Zero flag is set
+
+# If the program reaches this point it will stack into an infinite loop
+03. NOOP
+04. NOOP
+05. MOV -1 	# ACC = -1
+06. J		
+
+# Validate the ALU using all of its components
+# First load a value to the ACC, and then use ROL, AND and SUB
+# Finally, compare with the expected value
+
+07. MOV 30
+08. ROL 27
+09. AND 2
+10. DS
+11. ADD 3
+12. DS
+13. SUB 4
+14. DS
+15. JZ 1
+
+16. JNE -1
+
+# Validate the load and store instructions by writting to- and reading from a memory address.
+# Once again, compare with the expected values
+
+17. MOV 128
+18. DS
+19. SB 6
+20. ADD 1	# Dummy instr., just to alter the ACC and make sure SB/LB work
+21. LB 6
+22. DS
+23. CMP 7
+24. SUB 8
+25. JZ 2
+
+# If the program reaches this point it will stack into an infinite loop
+26. MOV -1
+27. J
+
+
+# Again, this part of the program shouldn't be reached if everything works properly
+28. MOV 2
+29. J
+30. SB 128
+31. NOOP
+
+
+# Continue with load and store validation
+31. MOV 6
+32. SBI 9 
+33. MOV 178	# Dummy instr., just to alter the ACC and make sure SBI/LBI work
+34. LBI 9 
+35. DS
+36. CMP 10
+37. SUB 11
+38. JZ 2
+
+
+39. MOV -2
+40. J
+
+# If the program reaches this point, it starts an endleses loop between addresses 38 and 39
+41. MOV -1
+42. J
