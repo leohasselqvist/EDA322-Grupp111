@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_misc.all;
+use IEEE.NUMERIC_STD.all;
 
 entity alu_wRCA is
     port(
@@ -24,15 +25,18 @@ architecture Structural of alu_wRCA is
 	signal aRol: std_logic_vector(7 downto 0);
 	signal outRol: std_logic_vector(7 downto 0);
 	signal zCheck: std_logic_vector(7 downto 0);
+	signal bRol: std_logic_vector(7 downto 0);
 	begin
 		aAnd <= alu_inA;
 		bAnd <= alu_inB;
 		outAnd <= aAnd and bAnd;
 		
 		aRol <= alu_inA;
+		bRol <= alu_inB(2 downto 0);
 		rol_o: entity work.rotateleft(Dataflow)
 			port map (
 				ain => aRol,
+				bin => bRol,
 				bout => outRol
 			);
 
@@ -47,7 +51,7 @@ architecture Structural of alu_wRCA is
 				cout => C,
 				s => s
 			);
-		mux: entity work.mux4to1(dataflow)
+		mux: entity work.mux4to1(Dataflow)
 			port map (
 				w0 => outRol,
 				w1 => outAnd,

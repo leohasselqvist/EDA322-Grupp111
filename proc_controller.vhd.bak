@@ -60,8 +60,20 @@ architecture Controller of proc_controller is
 			next_state <= FE;
 		end if;
 	end process;
-	storage:  process(opcode, e_flag, z_flag, master_load_enable)
+	storage:  process(opcode, e_flag, z_flag, master_load_enable, curr_state)
 	begin
+		busSel <= "0000";
+	        pcSel <= '0';
+	        pcLd <= '0';
+	        imRead <= '0';
+	        dmRead <= '0';
+	        dmWrite <= '0';
+	        aluOp <= "00";
+	        flagLd <= '0';
+	        accSel <= '0';
+ 	        accLd <= '0';
+	        dsLd <= '0';
+			
 		-- FETCH
 		if (curr_state = FE) then
 			imRead <= '1' and master_load_enable;
@@ -69,7 +81,7 @@ architecture Controller of proc_controller is
 			pcLd <= '1' and master_load_enable;
 		-- DECODE 1
 		elsif (curr_state = DE1) then
-			if ((opcode > "0110") and not (opcode = "1110")) then
+			if ((opcode > "0110") and not (opcode = "1101")) then
 				busSel <= "0001";
 				dmRead <= '1' and master_load_enable;
 			end if;
@@ -107,10 +119,12 @@ architecture Controller of proc_controller is
 				when others 				=> accSel <= 'X';
 			end case;
 			--aluOp
-			if ((opcode > "0111") and (opcode < "1100")) then
-				aluOp(1) <= opcode(3);
-				aluOp(0) <= opcode(2);
-			end if;
+			case opcode is
+				when "1000" => aluOp <= "00";
+				when "1001" => aluOp <= "01";
+				when "1010" => aluOp <= "10";
+				when "1011" => aluOp <= "11";
+				when others => aluOp <= "XX";
 			-- rest are master load enable dependant
 			if (master_load_enable = '1') then
 				--pcLd
